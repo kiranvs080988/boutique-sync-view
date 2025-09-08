@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 import heroImage from "@/assets/hero-boutique.jpg";
 
 const Hero = () => {
@@ -16,28 +17,30 @@ const Hero = () => {
       <div className="relative z-10 text-center text-white px-4 max-w-4xl mx-auto">
         <div className="animate-fade-in">
           <h1 className="text-5xl md:text-7xl font-display font-bold mb-6 leading-tight">
-            Luxury
+            Boutique Work Orders
             <span className="block text-gradient bg-gradient-secondary bg-clip-text text-transparent">
-              Redefined
+              Management
             </span>
           </h1>
           <p className="text-xl md:text-2xl font-light mb-8 text-white/90 max-w-2xl mx-auto">
-            Discover our curated collection of premium fashion pieces that blend timeless elegance with contemporary style.
+            Streamline your boutique operations with our comprehensive work order management system for tracking orders, clients, and delivery schedules.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Button 
               variant="boutique" 
               size="lg" 
               className="px-8 py-4 text-lg"
+              asChild
             >
-              Explore Collection
+              <Link to="/dashboard">View Dashboard</Link>
             </Button>
             <Button 
               variant="elegant" 
               size="lg" 
               className="px-8 py-4 text-lg bg-white/10 text-white border-white/20 hover:bg-white/20"
+              asChild
             >
-              Watch Lookbook
+              <Link to="/create-order">Create New Order</Link>
             </Button>
           </div>
         </div>

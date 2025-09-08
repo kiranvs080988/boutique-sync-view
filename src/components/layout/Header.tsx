@@ -21,14 +21,14 @@ const Header = () => {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
-            <Link to="/products" className="text-foreground hover:text-secondary transition-colors duration-200">
-              Collections
+            <Link to="/dashboard" className="text-foreground hover:text-secondary transition-colors duration-200">
+              Dashboard
             </Link>
-            <Link to="/about" className="text-foreground hover:text-secondary transition-colors duration-200">
-              About
+            <Link to="/orders" className="text-foreground hover:text-secondary transition-colors duration-200">
+              Work Orders
             </Link>
-            <Link to="/contact" className="text-foreground hover:text-secondary transition-colors duration-200">
-              Contact
+            <Link to="/create-order" className="text-foreground hover:text-secondary transition-colors duration-200">
+              New Order
             </Link>
           </nav>
 
@@ -37,7 +37,7 @@ const Header = () => {
             <div className="relative w-full">
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-muted-foreground w-4 h-4" />
               <Input 
-                placeholder="Search products..." 
+                placeholder="Search orders..." 
                 className="pl-10 bg-muted/50 border-border focus:border-secondary"
               />
             </div>
@@ -74,31 +74,31 @@ const Header = () => {
               <div className="relative">
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-muted-foreground w-4 h-4" />
                 <Input 
-                  placeholder="Search products..." 
+                  placeholder="Search orders..." 
                   className="pl-10 bg-muted/50 border-border"
                 />
               </div>
               <nav className="flex flex-col space-y-4">
                 <Link 
-                  to="/products" 
+                  to="/dashboard" 
                   className="text-foreground hover:text-secondary transition-colors duration-200"
                   onClick={() => setIsMenuOpen(false)}
                 >
-                  Collections
+                  Dashboard
                 </Link>
                 <Link 
-                  to="/about" 
+                  to="/orders" 
                   className="text-foreground hover:text-secondary transition-colors duration-200"
                   onClick={() => setIsMenuOpen(false)}
                 >
-                  About
+                  Work Orders
                 </Link>
                 <Link 
-                  to="/contact" 
+                  to="/create-order" 
                   className="text-foreground hover:text-secondary transition-colors duration-200"
                   onClick={() => setIsMenuOpen(false)}
                 >
-                  Contact
+                  New Order
                 </Link>
               </nav>
               <div className="flex items-center justify-between pt-4 border-t border-border">
